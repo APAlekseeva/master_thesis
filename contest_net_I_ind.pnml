@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="imdf_net_1699388461.592463" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text>imdf_net_1699388461.592463</text>
+    </name>
+    <page id="n0">
+      <place id="source">
+        <name>
+          <text>source</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="p_4">
+        <name>
+          <text>p_4</text>
+        </name>
+      </place>
+      <place id="sink">
+        <name>
+          <text>sink</text>
+        </name>
+      </place>
+      <place id="p_3">
+        <name>
+          <text>p_3</text>
+        </name>
+      </place>
+      <transition id="4591e240-9ac3-4c85-bdd1-962d9b972eb7">
+        <name>
+          <text>I** WA</text>
+        </name>
+      </transition>
+      <transition id="tau_1">
+        <name>
+          <text>tau_1</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="a698d255-5eca-48fe-b258-73b09ee3861d"/>
+      </transition>
+      <transition id="0c39b625-8074-495e-83d9-e26eadaccf00">
+        <name>
+          <text>I** OK</text>
+        </name>
+      </transition>
+      <transition id="skip_3">
+        <name>
+          <text>skip_3</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="9ced13eb-30ed-44c2-ab07-0dbce0af3c21"/>
+      </transition>
+      <transition id="tau_2">
+        <name>
+          <text>tau_2</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="39f90b3a-849a-45c0-b0e9-4239d1f34efc"/>
+      </transition>
+      <arc id="2588710910176" source="source" target="tau_1"/>
+      <arc id="2588710910752" source="tau_2" target="sink"/>
+      <arc id="2588710909600" source="tau_1" target="p_3"/>
+      <arc id="2588710911520" source="4591e240-9ac3-4c85-bdd1-962d9b972eb7" target="p_4"/>
+      <arc id="2588710911616" source="p_3" target="0c39b625-8074-495e-83d9-e26eadaccf00"/>
+      <arc id="2588710911712" source="0c39b625-8074-495e-83d9-e26eadaccf00" target="p_4"/>
+      <arc id="2588710910512" source="p_3" target="skip_3"/>
+      <arc id="2588710910800" source="p_4" target="tau_2"/>
+      <arc id="2588710911184" source="skip_3" target="p_4"/>
+      <arc id="2588710911376" source="p_3" target="4591e240-9ac3-4c85-bdd1-962d9b972eb7"/>
+    </page>
+  </net>
+</pnml>

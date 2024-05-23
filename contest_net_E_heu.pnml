@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text></text>
+    </name>
+    <page id="n0">
+      <place id="pre_E OK">
+        <name>
+          <text>pre_E OK</text>
+        </name>
+      </place>
+      <place id="pre_E RE">
+        <name>
+          <text>pre_E RE</text>
+        </name>
+      </place>
+      <place id="intplace_E CE">
+        <name>
+          <text>intplace_E CE</text>
+        </name>
+      </place>
+      <place id="source0">
+        <name>
+          <text>source0</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="sink0">
+        <name>
+          <text>sink0</text>
+        </name>
+      </place>
+      <place id="pre_E CE">
+        <name>
+          <text>pre_E CE</text>
+        </name>
+      </place>
+      <transition id="E RE">
+        <name>
+          <text>E RE</text>
+        </name>
+      </transition>
+      <transition id="E CE">
+        <name>
+          <text>E CE</text>
+        </name>
+      </transition>
+      <transition id="E OK">
+        <name>
+          <text>E OK</text>
+        </name>
+      </transition>
+      <transition id="hid_6">
+        <name>
+          <text>hid_6</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="88559c89-5804-47be-bc1d-e1c1708952dc"/>
+      </transition>
+      <transition id="hid_8">
+        <name>
+          <text>hid_8</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="6c9113f8-5ce8-48f8-af54-9205baa7f40d"/>
+      </transition>
+      <transition id="E WA">
+        <name>
+          <text>E WA</text>
+        </name>
+      </transition>
+      <transition id="hid_2">
+        <name>
+          <text>hid_2</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="0d34725c-de43-4228-840c-455f750fca1c"/>
+      </transition>
+      <transition id="hid_11">
+        <name>
+          <text>hid_11</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="fcb21fbc-d7bb-4afd-a1c1-19c999cb88a9"/>
+      </transition>
+      <transition id="hid_12">
+        <name>
+          <text>hid_12</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="881eb328-b16d-4013-a44a-ea845766c0dc"/>
+      </transition>
+      <arc id="1786921049872" source="hid_6" target="pre_E OK"/>
+      <arc id="1786919634448" source="E RE" target="pre_E OK"/>
+      <arc id="1786919635744" source="E CE" target="intplace_E CE"/>
+      <arc id="1786921094448" source="pre_E RE" target="E RE"/>
+      <arc id="1786921049776" source="source0" target="hid_6"/>
+      <arc id="1786919635504" source="intplace_E CE" target="hid_11"/>
+      <arc id="1786920898368" source="pre_E OK" target="E OK"/>
+      <arc id="1786921049536" source="source0" target="E WA"/>
+      <arc id="1786921049152" source="source0" target="hid_8"/>
+      <arc id="1786919634880" source="hid_11" target="pre_E CE"/>
+      <arc id="1786921095120" source="hid_2" target="pre_E RE"/>
+      <arc id="1786921049296" source="pre_E CE" target="E CE"/>
+      <arc id="1786919636560" source="intplace_E CE" target="hid_12"/>
+      <arc id="1786921094880" source="source0" target="hid_2"/>
+      <arc id="1786919634784" source="hid_8" target="pre_E CE"/>
+      <arc id="1786919634400" source="hid_12" target="pre_E OK"/>
+      <arc id="1786919633776" source="E OK" target="sink0"/>
+      <arc id="1786919635312" source="E WA" target="pre_E OK"/>
+      <arc id="1786919636464" source="E WA" target="pre_E RE"/>
+    </page>
+  </net>
+</pnml>

@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text></text>
+    </name>
+    <page id="n0">
+      <place id="pre_F* WA">
+        <name>
+          <text>pre_F* WA</text>
+        </name>
+      </place>
+      <place id="pre_F* OK">
+        <name>
+          <text>pre_F* OK</text>
+        </name>
+      </place>
+      <place id="source0">
+        <name>
+          <text>source0</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="sink0">
+        <name>
+          <text>sink0</text>
+        </name>
+      </place>
+      <place id="intplace_F* WA">
+        <name>
+          <text>intplace_F* WA</text>
+        </name>
+      </place>
+      <transition id="F* WA">
+        <name>
+          <text>F* WA</text>
+        </name>
+      </transition>
+      <transition id="hid_2">
+        <name>
+          <text>hid_2</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="1a0918a6-168a-48f4-8c08-32638bf5f8f1"/>
+      </transition>
+      <transition id="hid_5">
+        <name>
+          <text>hid_5</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="cfdc5160-b92f-4b43-9959-199fc996dfd6"/>
+      </transition>
+      <transition id="hid_7">
+        <name>
+          <text>hid_7</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="9477ef61-35d8-4348-bcc7-3a851114d99f"/>
+      </transition>
+      <transition id="F* OK">
+        <name>
+          <text>F* OK</text>
+        </name>
+      </transition>
+      <transition id="hid_4">
+        <name>
+          <text>hid_4</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="0c79d339-217a-4788-a026-31bf1f5af4bb"/>
+      </transition>
+      <transition id="hid_6">
+        <name>
+          <text>hid_6</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="16bf71e5-0897-4b8a-af05-25c6471fc737"/>
+      </transition>
+      <arc id="1786920897408" source="hid_4" target="pre_F* OK"/>
+      <arc id="1786920895536" source="pre_F* WA" target="F* WA"/>
+      <arc id="1786921123504" source="intplace_F* WA" target="hid_7"/>
+      <arc id="1786920896448" source="source0" target="hid_2"/>
+      <arc id="1786920897216" source="source0" target="hid_4"/>
+      <arc id="1786921128000" source="hid_5" target="pre_F* OK"/>
+      <arc id="1786920897360" source="F* WA" target="intplace_F* WA"/>
+      <arc id="1786921123792" source="hid_6" target="pre_F* WA"/>
+      <arc id="1786920896736" source="pre_F* OK" target="F* OK"/>
+      <arc id="1786921123168" source="intplace_F* WA" target="hid_6"/>
+      <arc id="1786921123552" source="hid_7" target="sink0"/>
+      <arc id="1786920896496" source="hid_2" target="pre_F* WA"/>
+      <arc id="1786921122928" source="intplace_F* WA" target="hid_5"/>
+      <arc id="1786921123696" source="F* OK" target="sink0"/>
+    </page>
+  </net>
+</pnml>

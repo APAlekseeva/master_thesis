@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text></text>
+    </name>
+    <page id="n0">
+      <place id="source0">
+        <name>
+          <text>source0</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="pre_J** OK">
+        <name>
+          <text>pre_J** OK</text>
+        </name>
+      </place>
+      <place id="sink0">
+        <name>
+          <text>sink0</text>
+        </name>
+      </place>
+      <transition id="J** WA">
+        <name>
+          <text>J** WA</text>
+        </name>
+      </transition>
+      <transition id="J** OK">
+        <name>
+          <text>J** OK</text>
+        </name>
+      </transition>
+      <transition id="hid_2">
+        <name>
+          <text>hid_2</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="243fc9f5-1ffa-4450-ad9d-96653e4908e4"/>
+      </transition>
+      <arc id="1786921082784" source="source0" target="hid_2"/>
+      <arc id="1786920895392" source="pre_J** OK" target="J** OK"/>
+      <arc id="1786921082400" source="J** OK" target="sink0"/>
+      <arc id="1786921081920" source="J** WA" target="pre_J** OK"/>
+      <arc id="1786920895632" source="source0" target="J** WA"/>
+      <arc id="1786921081584" source="hid_2" target="pre_J** OK"/>
+    </page>
+  </net>
+</pnml>

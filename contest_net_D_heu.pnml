@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text></text>
+    </name>
+    <page id="n0">
+      <place id="source0">
+        <name>
+          <text>source0</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="intplace_D RE">
+        <name>
+          <text>intplace_D RE</text>
+        </name>
+      </place>
+      <place id="sink0">
+        <name>
+          <text>sink0</text>
+        </name>
+      </place>
+      <place id="pre_D OK">
+        <name>
+          <text>pre_D OK</text>
+        </name>
+      </place>
+      <place id="pre_D WA">
+        <name>
+          <text>pre_D WA</text>
+        </name>
+      </place>
+      <place id="pre_D RE">
+        <name>
+          <text>pre_D RE</text>
+        </name>
+      </place>
+      <place id="intplace_D WA">
+        <name>
+          <text>intplace_D WA</text>
+        </name>
+      </place>
+      <transition id="D WA">
+        <name>
+          <text>D WA</text>
+        </name>
+      </transition>
+      <transition id="hid_5">
+        <name>
+          <text>hid_5</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="ad56625c-2d08-4fa1-b73d-076d35723ba6"/>
+      </transition>
+      <transition id="hid_7">
+        <name>
+          <text>hid_7</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="a43c81b5-8850-4c14-880e-b7e0bbdf0c6a"/>
+      </transition>
+      <transition id="hid_11">
+        <name>
+          <text>hid_11</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="2e04c23d-ec9c-4ee1-9685-f23771a6769b"/>
+      </transition>
+      <transition id="D CE">
+        <name>
+          <text>D CE</text>
+        </name>
+      </transition>
+      <transition id="D RE">
+        <name>
+          <text>D RE</text>
+        </name>
+      </transition>
+      <transition id="D OK">
+        <name>
+          <text>D OK</text>
+        </name>
+      </transition>
+      <transition id="hid_2">
+        <name>
+          <text>hid_2</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="87dc4cd0-2d76-4f3b-a73d-9f088249826b"/>
+      </transition>
+      <transition id="hid_9">
+        <name>
+          <text>hid_9</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="fbac0ccc-55b3-4a2a-aabd-f9fa04a3cfb8"/>
+      </transition>
+      <transition id="hid_12">
+        <name>
+          <text>hid_12</text>
+        </name>
+        <toolspecific tool="ProM" version="6.4" activity="$invisible$" localNodeID="d697677b-3e09-4f3b-914d-ae29bf2b7263"/>
+      </transition>
+      <arc id="1786920638208" source="hid_7" target="pre_D RE"/>
+      <arc id="1786920983184" source="pre_D WA" target="D WA"/>
+      <arc id="1786920640272" source="intplace_D RE" target="hid_12"/>
+      <arc id="1786920894864" source="intplace_D WA" target="D CE"/>
+      <arc id="1786920638112" source="source0" target="hid_7"/>
+      <arc id="1786920276416" source="hid_5" target="pre_D OK"/>
+      <arc id="1786920639552" source="D CE" target="sink0"/>
+      <arc id="1786920639936" source="intplace_D RE" target="hid_11"/>
+      <arc id="1786920983760" source="hid_2" target="pre_D WA"/>
+      <arc id="1786920638928" source="intplace_D WA" target="hid_9"/>
+      <arc id="1786920639696" source="D RE" target="intplace_D RE"/>
+      <arc id="1786920640464" source="hid_9" target="pre_D WA"/>
+      <arc id="1786920894672" source="hid_9" target="pre_D OK"/>
+      <arc id="1786920983904" source="pre_D OK" target="D OK"/>
+      <arc id="1786920276320" source="source0" target="hid_5"/>
+      <arc id="1786920637536" source="pre_D RE" target="D RE"/>
+      <arc id="1786920639456" source="D OK" target="sink0"/>
+      <arc id="1786920983664" source="source0" target="hid_2"/>
+      <arc id="1786920638448" source="D WA" target="intplace_D WA"/>
+      <arc id="1786920640368" source="hid_11" target="pre_D OK"/>
+      <arc id="1786920894576" source="hid_12" target="pre_D RE"/>
+    </page>
+  </net>
+</pnml>
